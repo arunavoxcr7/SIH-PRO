@@ -1,0 +1,293 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Project Schedule & Gantt — OIL Intelligent Progress Bridge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="brand-wrapper">
+          <img src="assets/oil-logo.svg" alt="Oil India Limited" class="brand-logo-img">
+        </div>
+        <div class="sih-badge">SIH 2026 Prototype</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-group-title">Main Control</div>
+        <a href="dashboard.html" class="nav-link">
+          <span class="nav-icon">📊</span> Dashboard
+        </a>
+        <a href="planning.html" class="nav-link">
+          <span class="nav-icon">📐</span> Project Planning
+        </a>
+        <a href="site-input.html" class="nav-link">
+          <span class="nav-icon">✏️</span> Site Input
+        </a>
+        <a href="schedule.html" class="nav-link active">
+          <span class="nav-icon">📅</span> Schedule
+        </a>
+
+        <div class="nav-group-title" style="margin-top: 16px;">Governance & Analysis</div>
+        <a href="review.html" class="nav-link">
+          <span class="nav-icon">⚠️</span> Review Centre
+          <span class="nav-count-badge">3</span>
+        </a>
+        <a href="analytics.html" class="nav-link">
+          <span class="nav-icon">📈</span> Analytics
+        </a>
+        <a href="memory.html" class="nav-link">
+          <span class="nav-icon">🧠</span> Project Memory
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">PE</div>
+          <div class="user-info">
+            <span class="user-name">Planning Engineer</span>
+            <span class="user-role">Primavera P6 Administrator</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN APP CONTENT -->
+    <main class="app-main">
+      <header class="app-header">
+        <div class="header-left">
+          <h1 class="page-title">Project Schedule</h1>
+          <div class="project-context-pill">
+            L4 Baseline Schedule & Progress Tracker View
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="header-badge badge-synthetic">SYNTHETIC DEMO DATA</span>
+          <span class="header-badge badge-problem">SIH26122</span>
+        </div>
+      </header>
+
+      <div class="content-container">
+
+        <!-- SCHEDULE CONTROLS & FILTER BAR -->
+        <div class="schedule-controls-bar">
+          <div class="filter-group">
+            <input type="text" class="search-input" placeholder="Search Activity ID or Name..." value="WP03">
+            <select class="filter-select">
+              <option>Discipline: All</option>
+              <option selected>Civil (CIV)</option>
+              <option>Piping (PIP)</option>
+              <option>Mechanical (MEC)</option>
+            </select>
+            <select class="filter-select">
+              <option>Area: All</option>
+              <option selected>WP03 (Well Pad 3)</option>
+              <option>WP04 (Well Pad 4)</option>
+            </select>
+          </div>
+          <div class="filter-group">
+            <div style="font-size: 12px; font-weight: 700; color: var(--text-muted);">
+              Data Date: <strong>08 Sep 2026</strong>
+            </div>
+          </div>
+        </div>
+
+        <!-- L4 ACTIVITY SCHEDULE TABLE WITH PROGRESS TRACKERS -->
+        <div class="card" style="padding: 0; overflow: hidden; margin-bottom: 24px;">
+          <div class="enterprise-table-container">
+            <table class="enterprise-table">
+              <thead>
+                <tr>
+                  <th>ACTIVITY ID</th>
+                  <th>ACTIVITY NAME</th>
+                  <th>DISCIPLINE</th>
+                  <th>PLANNED START</th>
+                  <th>PLANNED FINISH</th>
+                  <th>ACTUAL START</th>
+                  <th>PROGRESS TRACKER</th>
+                  <th>STATUS</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td><strong style="font-family: monospace; color: var(--oil-navy);">WP03-CIV-0100</strong></td>
+                  <td><strong>Site Preparation & Foundation Excavation</strong></td>
+                  <td>Civil</td>
+                  <td>01 Sep 2026</td>
+                  <td>07 Sep 2026</td>
+                  <td>01 Sep 2026</td>
+                  <td>
+                    <div class="progress-tracker-bar">
+                      <div class="tracker-track"><div class="tracker-fill fill-green" style="width: 100%;"></div></div>
+                      <span class="tracker-text" style="color: var(--status-green);">100%</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-green">Completed</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="font-family: monospace; color: var(--oil-navy);">WP03-PIP-0200</strong></td>
+                  <td><strong>Pipeline Line 24 Welding & Trenching</strong></td>
+                  <td>Piping</td>
+                  <td>05 Sep 2026</td>
+                  <td>12 Sep 2026</td>
+                  <td>06 Sep 2026</td>
+                  <td>
+                    <div class="progress-tracker-bar">
+                      <div class="tracker-track"><div class="tracker-fill fill-amber" style="width: 80%;"></div></div>
+                      <span class="tracker-text" style="color: var(--status-amber);">80%</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-amber">In Progress</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="font-family: monospace; color: var(--oil-navy);">WP04-MEC-0300</strong></td>
+                  <td><strong>Valve Assembly Installation Unit 3</strong></td>
+                  <td>Mechanical</td>
+                  <td>07 Sep 2026</td>
+                  <td>15 Sep 2026</td>
+                  <td>07 Sep 2026</td>
+                  <td>
+                    <div class="progress-tracker-bar">
+                      <div class="tracker-track"><div class="tracker-fill" style="width: 45%;"></div></div>
+                      <span class="tracker-text">45%</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-blue">In Progress</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="font-family: monospace; color: var(--oil-navy);">WP02-ELE-0150</strong></td>
+                  <td><strong>Substation Transformer Wiring</strong></td>
+                  <td>Electrical</td>
+                  <td>08 Sep 2026</td>
+                  <td>18 Sep 2026</td>
+                  <td>08 Sep 2026</td>
+                  <td>
+                    <div class="progress-tracker-bar">
+                      <div class="tracker-track"><div class="tracker-fill" style="width: 20%;"></div></div>
+                      <span class="tracker-text">20%</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-blue">In Progress</span></td>
+                </tr>
+                <tr>
+                  <td><strong style="font-family: monospace; color: var(--oil-navy);">WP05-INS-0400</strong></td>
+                  <td><strong>Transmitter Calibration & PLC Loop Check</strong></td>
+                  <td>Instrumentation</td>
+                  <td>15 Sep 2026</td>
+                  <td>25 Sep 2026</td>
+                  <td>—</td>
+                  <td>
+                    <div class="progress-tracker-bar">
+                      <div class="tracker-track"><div class="tracker-fill" style="width: 0%;"></div></div>
+                      <span class="tracker-text">0%</span>
+                    </div>
+                  </td>
+                  <td><span class="badge badge-red">Pending</span></td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+
+        <!-- PRIMAVERA P6-STYLE GANTT CHART VISUAL -->
+        <div class="card">
+          <div class="card-header">
+            <div>
+              <h3 class="card-title">📅 Interactive Primavera P6 Timeline & Gantt Visual</h3>
+              <div class="card-subtitle">Visual timeline of planned L4 activities and on-ground progress</div>
+            </div>
+            <div style="display: flex; gap: 16px; font-size: 12px; font-weight: 600;">
+              <div style="display: flex; align-items: center; gap: 6px;"><span style="width:12px; height:12px; background:var(--status-blue); border-radius:2px;"></span> Planned</div>
+              <div style="display: flex; align-items: center; gap: 6px;"><span style="width:12px; height:12px; background:var(--status-green); border-radius:2px;"></span> Completed (100%)</div>
+              <div style="display: flex; align-items: center; gap: 6px;"><span style="width:12px; height:12px; background:var(--status-amber); border-radius:2px;"></span> In Progress</div>
+            </div>
+          </div>
+
+          <div class="gantt-wrapper">
+            <div class="gantt-grid">
+              
+              <!-- GANTT HEADER -->
+              <div class="gantt-header-row">
+                <div class="gantt-cell cell-activity" style="justify-content: flex-start;">L4 ACTIVITY CODE</div>
+                <div class="gantt-cell">01 SEP</div>
+                <div class="gantt-cell">03 SEP</div>
+                <div class="gantt-cell">05 SEP</div>
+                <div class="gantt-cell">07 SEP</div>
+                <div class="gantt-cell" style="background: rgba(245,158,11,0.2); color: var(--oil-gold-bright);">08 SEP ★</div>
+                <div class="gantt-cell">10 SEP</div>
+                <div class="gantt-cell">12 SEP</div>
+                <div class="gantt-cell">15 SEP</div>
+                <div class="gantt-cell">18 SEP</div>
+              </div>
+
+              <!-- ROW 1 -->
+              <div class="gantt-body-row">
+                <div class="activity-info">
+                  <span class="act-code">WP03-CIV-0100</span>
+                  <span class="act-name">Foundation Excavation</span>
+                </div>
+                <div class="gantt-track-area">
+                  <div class="gantt-grid-col"></div><div class="gantt-grid-col"></div><div class="gantt-grid-col"></div>
+                  <div class="gantt-grid-col"></div><div class="gantt-grid-col"></div><div class="gantt-grid-col"></div>
+                  <div class="gantt-grid-col"></div><div class="gantt-grid-col"></div><div class="gantt-grid-col"></div>
+                  <div class="gantt-bar-item gantt-bar-actual" style="left: 0%; width: 44%;">✓ 100% Completed</div>
+                </div>
+              </div>
+
+              <!-- ROW 2 -->
+              <div class="gantt-body-row">
+                <div class="activity-info">
+                  <span class="act-code">WP03-PIP-0200</span>
+                  <span class="act-name">Pipeline Line 24 Welding</span>
+                </div>
+                <div class="gantt-track-area">
+                  <div class="gantt-grid-col"></div><div class="gantt-grid-col"></div><div class="gantt-grid-col"></div>
+                  <div class="gantt-grid-col"></div><div class="gantt-grid-col"></div><div class="gantt-grid-col"></div>
+                  <div class="gantt-grid-col"></div><div class="gantt-grid-col"></div><div class="gantt-grid-col"></div>
+                  <div class="gantt-bar-item gantt-bar-amber" style="left: 22%; width: 55%;">80% In Progress</div>
+                </div>
+              </div>
+
+              <!-- ROW 3 -->
+              <div class="gantt-body-row">
+                <div class="activity-info">
+                  <span class="act-code">WP04-MEC-0300</span>
+                  <span class="act-name">Valve Installation Unit 3</span>
+                </div>
+                <div class="gantt-track-area">
+                  <div class="gantt-grid-col"></div><div class="gantt-grid-col"></div><div class="gantt-grid-col"></div>
+                  <div class="gantt-grid-col"></div><div class="gantt-grid-col"></div><div class="gantt-grid-col"></div>
+                  <div class="gantt-grid-col"></div><div class="gantt-grid-col"></div><div class="gantt-grid-col"></div>
+                  <div class="gantt-bar-item gantt-bar-planned" style="left: 33%; width: 55%;">45% In Progress</div>
+                </div>
+              </div>
+
+              <!-- ROW 4 -->
+              <div class="gantt-body-row">
+                <div class="activity-info">
+                  <span class="act-code">WP02-ELE-0150</span>
+                  <span class="act-name">Substation Wiring</span>
+                </div>
+                <div class="gantt-track-area">
+                  <div class="gantt-grid-col"></div><div class="gantt-grid-col"></div><div class="gantt-grid-col"></div>
+                  <div class="gantt-grid-col"></div><div class="gantt-grid-col"></div><div class="gantt-grid-col"></div>
+                  <div class="gantt-grid-col"></div><div class="gantt-grid-col"></div><div class="gantt-grid-col"></div>
+                  <div class="gantt-bar-item gantt-bar-planned" style="left: 44%; width: 44%;">20% Active</div>
+                </div>
+              </div>
+
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>

@@ -1,0 +1,319 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>OIL Intelligent Progress Bridge — AI-Powered Planning-to-Execution Prototype</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    .landing-header {
+      height: 80px;
+      background-color: var(--oil-navy-dark);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 40px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .landing-nav {
+      display: flex;
+      align-items: center;
+      gap: 24px;
+    }
+    .landing-nav-link {
+      color: rgba(255, 255, 255, 0.8);
+      font-weight: 600;
+      font-size: 14px;
+      transition: color var(--transition-fast);
+    }
+    .landing-nav-link:hover {
+      color: var(--oil-gold-bright);
+    }
+    .hero-section {
+      background: radial-gradient(circle at 50% 20%, #0F2B48 0%, #071626 100%);
+      color: var(--text-white);
+      padding: 80px 40px;
+      text-align: center;
+      border-bottom: 1px solid var(--oil-navy-light);
+    }
+    .hero-title {
+      font-size: 44px;
+      font-weight: 900;
+      color: var(--text-white);
+      letter-spacing: -0.5px;
+      margin-bottom: 16px;
+      line-height: 1.15;
+    }
+    .hero-title span {
+      color: var(--oil-gold-bright);
+    }
+    .hero-subtitle {
+      font-size: 20px;
+      color: var(--oil-gold);
+      font-weight: 700;
+      margin-bottom: 20px;
+    }
+    .hero-description {
+      max-width: 780px;
+      margin: 0 auto 40px;
+      font-size: 16px;
+      color: rgba(255, 255, 255, 0.85);
+      line-height: 1.6;
+    }
+    .hero-actions {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 16px;
+      margin-bottom: 60px;
+    }
+    .landing-pipeline-box {
+      max-width: 1150px;
+      margin: 0 auto;
+      background: rgba(19, 39, 64, 0.75);
+      border: 1px solid var(--oil-gold-border);
+      border-radius: var(--radius-lg);
+      padding: 32px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
+    }
+    .how-it-works-section {
+      padding: 80px 40px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+    .section-heading {
+      text-align: center;
+      margin-bottom: 50px;
+    }
+    .section-title {
+      font-size: 28px;
+      font-weight: 800;
+      color: var(--oil-navy);
+      margin-bottom: 8px;
+    }
+    .section-sub {
+      font-size: 14px;
+      color: var(--text-muted);
+    }
+    .steps-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+    }
+    .step-card {
+      background-color: var(--bg-card);
+      border: 1px solid var(--border-light);
+      border-top: 4px solid var(--oil-navy);
+      border-radius: var(--radius-lg);
+      padding: 28px 20px;
+      box-shadow: var(--shadow-sm);
+    }
+    .step-card:hover {
+      border-top-color: var(--oil-gold);
+    }
+    .step-num-badge {
+      width: 32px;
+      height: 32px;
+      border-radius: var(--radius-full);
+      background: var(--oil-navy);
+      color: var(--oil-gold-bright);
+      font-weight: 800;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 14px;
+      font-size: 13px;
+    }
+    .step-card-title {
+      font-size: 16px;
+      font-weight: 800;
+      color: var(--oil-navy-dark);
+      margin-bottom: 8px;
+    }
+    .step-card-text {
+      font-size: 13px;
+      color: var(--text-muted);
+      line-height: 1.5;
+    }
+    .sih-info-banner {
+      max-width: 1200px;
+      margin: 0 auto 70px;
+      background: var(--oil-navy-dark);
+      border: 1px solid var(--oil-gold-border);
+      border-radius: var(--radius-lg);
+      padding: 32px 40px;
+      color: var(--text-white);
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 30px;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- LANDING NAVIGATION HEADER -->
+  <header class="landing-header">
+    <div class="brand-wrapper">
+      <img src="assets/oil-logo.svg" alt="Oil India Limited" class="brand-logo-img">
+    </div>
+    <nav class="landing-nav">
+      <a href="dashboard.html" class="landing-nav-link">Dashboard</a>
+      <a href="planning.html" class="landing-nav-link">Project Planning</a>
+      <a href="site-input.html" class="landing-nav-link">Site Input</a>
+      <a href="schedule.html" class="landing-nav-link">Schedule</a>
+      <a href="analytics.html" class="landing-nav-link">Analytics</a>
+      <a href="dashboard.html" class="btn btn-gold btn-sm">Explore Prototype</a>
+    </nav>
+    <div class="sih-badge">
+      SIH 2026 Prototype • Problem SIH26122
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero-section">
+    <div class="sih-badge" style="margin: 0 auto 16px;">
+      Oil India Limited • Smart Automation Category
+    </div>
+    <h1 class="hero-title">OIL Intelligent <span>Progress Bridge</span></h1>
+    <div class="hero-subtitle">Connecting Planned L4 Activities with Real-World Site Execution</div>
+    <p class="hero-description">
+      Connect what was planned with what is actually happening at the project site. 
+      Transform unstructured site reports into structured actual-progress events (L5/L6) and link them seamlessly to planned L4 activities (`WP03-CIV-0100`).
+    </p>
+
+    <div class="hero-actions">
+      <a href="dashboard.html" class="btn btn-gold" style="padding: 14px 28px; font-size: 15px;">
+        ⚡ Launch Control Dashboard
+      </a>
+      <a href="planning.html" class="btn btn-secondary" style="padding: 14px 28px; font-size: 15px; color: var(--text-white); background: rgba(255,255,255,0.1); border-color: rgba(255,255,255,0.2);">
+        📐 Project Planning Form
+      </a>
+    </div>
+
+    <!-- RECURRING VISUAL CONCEPT WORKFLOW -->
+    <div class="landing-pipeline-box">
+      <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 20px; border-bottom: 1px solid rgba(255,255,255,0.1); padding-bottom: 12px;">
+        <span style="font-weight: 800; color: var(--oil-gold-bright); font-size: 14px; letter-spacing: 1px;">
+          L4 ACTIVITY ➔ L5/L6 EVENTS ➔ ACTIVITY COMPLETION CONCEPT
+        </span>
+        <span class="badge badge-gold">Planning-to-Execution Linkage</span>
+      </div>
+
+      <div style="display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap;">
+        <!-- STEP 1 -->
+        <div style="background: rgba(255,255,255,0.06); border: 1px solid rgba(255,255,255,0.15); border-radius: var(--radius-md); padding: 14px; width: 220px; text-align: center;">
+          <div style="font-family: monospace; font-weight: 900; color: var(--oil-gold-bright); font-size: 13px;">L4 ACTIVITY</div>
+          <div style="font-weight: 800; font-size: 13px; color: #fff; margin-top: 2px;">WP03-CIV-0100</div>
+          <div style="font-size: 11px; color: rgba(255,255,255,0.7); margin-top: 4px;">Foundation Excavation</div>
+        </div>
+
+        <div style="font-size: 22px; color: var(--oil-gold); font-weight: 900;">➔</div>
+
+        <!-- STEP 2 -->
+        <div style="background: rgba(255,255,255,0.06); border: 1px solid var(--oil-gold-border); border-radius: var(--radius-md); padding: 14px; width: 250px; text-align: center;">
+          <div style="font-family: monospace; font-weight: 900; color: var(--oil-gold-bright); font-size: 13px;">L5/L6 SITE EVENTS</div>
+          <div style="font-size: 11px; color: rgba(255,255,255,0.8); margin-top: 4px;">
+            <code>eve_000001</code> Site preparation<br>
+            <code>eve_000002</code> Excavation trench<br>
+            <code>eve_000003</code> Concrete pouring
+          </div>
+        </div>
+
+        <div style="font-size: 22px; color: var(--oil-gold); font-weight: 900;">➔</div>
+
+        <!-- STEP 3 -->
+        <div style="background: rgba(16, 185, 129, 0.15); border: 1.5px solid var(--status-green); border-radius: var(--radius-md); padding: 14px; width: 220px; text-align: center;">
+          <div style="font-weight: 900; color: var(--status-green); font-size: 13px;">ACTIVITY STATUS</div>
+          <div style="font-weight: 800; font-size: 15px; color: #fff; margin-top: 2px;">100% COMPLETED</div>
+          <div style="font-size: 11px; color: rgba(255,255,255,0.8); margin-top: 4px;">WP03-CIV-0100 Completed</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- HOW IT WORKS SECTION (SIMPLIFIED 6-STEP WORKFLOW) -->
+  <section class="how-it-works-section" id="how-it-works">
+    <div class="section-heading">
+      <h2 class="section-title">How It Works — Simple 6-Step Workflow</h2>
+      <div class="section-sub">Engineered for Oil & Gas Enterprise Project Control Teams</div>
+    </div>
+
+    <div class="steps-grid">
+      <div class="step-card">
+        <div class="step-num-badge">1</div>
+        <h3 class="step-card-title">1. PLAN</h3>
+        <p class="step-card-text">
+          Planner creates L4 Activities (e.g. <code>WP03-CIV-0100</code>) and establishes the initial baseline project schedule.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num-badge">2</div>
+        <h3 class="step-card-title">2. CAPTURE</h3>
+        <p class="step-card-text">
+          Site team records actual on-ground execution L5/L6 Events (e.g. <code>eve_000001</code>) from field progress reports.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num-badge">3</div>
+        <h3 class="step-card-title">3. LINK</h3>
+        <p class="step-card-text">
+          Execution Events are associated with the correct planned L4 Activity code based on location, area, and discipline.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num-badge">4</div>
+        <h3 class="step-card-title">4. UPDATE</h3>
+        <p class="step-card-text">
+          Activity progress percentage is automatically updated based on completed on-ground Events.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num-badge">5</div>
+        <h3 class="step-card-title">5. REVIEW</h3>
+        <p class="step-card-text">
+          Planner verifies uncertain, conflicting, or unmatched site updates in the Review Centre.
+        </p>
+      </div>
+
+      <div class="step-card">
+        <div class="step-num-badge">6</div>
+        <h3 class="step-card-title">6. ANALYZE</h3>
+        <p class="step-card-text">
+          Project progress, area completion, and historical memory become available for executive decision-making.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <!-- SIH PROBLEM STATEMENT BANNER -->
+  <div class="sih-info-banner">
+    <div>
+      <div style="font-size: 12px; color: var(--oil-gold-bright); font-weight: 700; text-transform: uppercase; margin-bottom: 4px;">
+        Smart India Hackathon 2026 Problem Statement
+      </div>
+      <h3 style="font-size: 20px; font-weight: 800; margin-bottom: 6px;">
+        SIH26122 — Oil India Limited (OIL)
+      </h3>
+      <p style="font-size: 13px; color: rgba(255,255,255,0.8);">
+        Category: Software — Smart Automation • Visual Frontend Prototype
+      </p>
+    </div>
+    <a href="dashboard.html" class="btn btn-gold" style="white-space: nowrap;">
+      Launch Control Center →
+    </a>
+  </div>
+
+  <footer style="text-align: center; padding: 24px; color: var(--text-muted); font-size: 12px; border-top: 1px solid var(--border-light);">
+    © 2026 Oil India Limited • SIH 2026 Prototype Demonstration • Pipeline Expansion Project — Phase II
+  </footer>
+
+</body>
+</html>

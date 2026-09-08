@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Review Centre — OIL Intelligent Progress Bridge</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app-layout">
+    <!-- SIDEBAR NAVIGATION -->
+    <aside class="app-sidebar">
+      <div class="sidebar-header">
+        <div class="brand-wrapper">
+          <img src="assets/oil-logo.svg" alt="Oil India Limited" class="brand-logo-img">
+        </div>
+        <div class="sih-badge">SIH 2026 Prototype</div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <div class="nav-group-title">Main Control</div>
+        <a href="dashboard.html" class="nav-link">
+          <span class="nav-icon">📊</span> Dashboard
+        </a>
+        <a href="planning.html" class="nav-link">
+          <span class="nav-icon">📐</span> Project Planning
+        </a>
+        <a href="site-input.html" class="nav-link">
+          <span class="nav-icon">✏️</span> Site Input
+        </a>
+        <a href="schedule.html" class="nav-link">
+          <span class="nav-icon">📅</span> Schedule
+        </a>
+
+        <div class="nav-group-title" style="margin-top: 16px;">Governance & Analysis</div>
+        <a href="review.html" class="nav-link active">
+          <span class="nav-icon">⚠️</span> Review Centre
+          <span class="nav-count-badge">3</span>
+        </a>
+        <a href="analytics.html" class="nav-link">
+          <span class="nav-icon">📈</span> Analytics
+        </a>
+        <a href="memory.html" class="nav-link">
+          <span class="nav-icon">🧠</span> Project Memory
+        </a>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="user-profile">
+          <div class="user-avatar">QA</div>
+          <div class="user-info">
+            <span class="user-name">Lead Planner / Reviewer</span>
+            <span class="user-role">Verification Division</span>
+          </div>
+        </div>
+      </div>
+    </aside>
+
+    <!-- MAIN APP CONTENT -->
+    <main class="app-main">
+      <header class="app-header">
+        <div class="header-left">
+          <h1 class="page-title">Review Centre</h1>
+          <div class="project-context-pill">
+            Verify & approve uncertain or conflicting site execution events
+          </div>
+        </div>
+        <div class="header-right">
+          <span class="header-badge badge-synthetic">SYNTHETIC DEMO DATA</span>
+          <span class="header-badge badge-problem">SIH26122</span>
+        </div>
+      </header>
+
+      <div class="content-container">
+
+        <div class="card" style="margin-bottom: 20px;">
+          <div class="card-header">
+            <h3 class="card-title">⚠️ Site Events Verification Queue</h3>
+            <span class="badge badge-amber">3 Pending Review</span>
+          </div>
+          <div class="card-subtitle">
+            Review site events submitted by field supervisors before they update the planned L4 Activity progress.
+          </div>
+        </div>
+
+        <!-- REVIEW ITEM 1 -->
+        <div class="review-item-card" style="border-left: 4px solid var(--status-amber);">
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+              <span style="font-family: monospace; font-weight: 800; font-size: 13px; color: var(--oil-navy);">Event: eve_000017</span>
+              <span class="badge badge-amber">Needs Review</span>
+              <span style="font-size: 11px; color: var(--text-muted);">Area: WP03</span>
+            </div>
+            <div style="font-size: 15px; font-weight: 800; color: var(--oil-navy-dark); margin-bottom: 6px;">
+              "Foundation excavation completed at Well Pad 3"
+            </div>
+            <div style="font-size: 12px; color: var(--text-muted);">
+              Suggested L4 Activity: <strong style="font-family: monospace; color: var(--oil-navy);">WP03-CIV-0100</strong> (Foundation Excavation)
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <button class="btn btn-gold btn-sm">Accept Event</button>
+            <button class="btn btn-secondary btn-sm">Review Details</button>
+            <button class="btn btn-secondary btn-sm" style="color: var(--status-red);">Reject</button>
+          </div>
+        </div>
+
+        <!-- REVIEW ITEM 2 -->
+        <div class="review-item-card" style="border-left: 4px solid var(--status-red);">
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+              <span style="font-family: monospace; font-weight: 800; font-size: 13px; color: var(--oil-navy);">Event: eve_000022</span>
+              <span class="badge badge-red">Progress Conflict</span>
+              <span style="font-size: 11px; color: var(--text-muted);">Area: WP03</span>
+            </div>
+            <div style="font-size: 15px; font-weight: 800; color: var(--oil-navy-dark); margin-bottom: 6px;">
+              "Foundation rebar work re-opened for inspection"
+            </div>
+            <div style="font-size: 12px; color: var(--text-muted);">
+              Schedule shows 100% completion for <strong style="font-family: monospace; color: var(--oil-navy);">WP03-CIV-0100</strong>, but site event reports active re-inspection.
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <button class="btn btn-primary btn-sm" style="background: var(--status-red);">Investigate</button>
+            <button class="btn btn-secondary btn-sm">Accept Event</button>
+            <button class="btn btn-secondary btn-sm" style="color: var(--status-red);">Reject</button>
+          </div>
+        </div>
+
+        <!-- REVIEW ITEM 3 -->
+        <div class="review-item-card" style="border-left: 4px solid var(--status-blue);">
+          <div style="flex: 1;">
+            <div style="display: flex; align-items: center; gap: 12px; margin-bottom: 6px;">
+              <span style="font-family: monospace; font-weight: 800; font-size: 13px; color: var(--oil-navy);">Event: eve_000031</span>
+              <span class="badge badge-blue">Unmatched Entry</span>
+              <span style="font-size: 11px; color: var(--text-muted);">Area: Unit 3</span>
+            </div>
+            <div style="font-size: 15px; font-weight: 800; color: var(--oil-navy-dark); margin-bottom: 6px;">
+              "Temporary access road completed near Unit 3"
+            </div>
+            <div style="font-size: 12px; color: var(--text-muted);">
+              No baseline L4 Activity code found for temporary access road near Unit 3.
+            </div>
+          </div>
+
+          <div style="display: flex; gap: 10px; align-items: center;">
+            <button class="btn btn-gold btn-sm">Assign Activity Code</button>
+            <button class="btn btn-secondary btn-sm" style="color: var(--status-red);">Reject</button>
+          </div>
+        </div>
+
+      </div>
+    </main>
+  </div>
+
+</body>
+</html>
